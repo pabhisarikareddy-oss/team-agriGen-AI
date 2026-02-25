@@ -1,1 +1,1 @@
-# team-agriGen-AI
+# team-agriGenAI
