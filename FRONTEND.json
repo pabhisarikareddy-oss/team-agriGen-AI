@@ -1,0 +1,272 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "KrishiSahay – AI-Powered Agricultural Assistant Website Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Apply cohesive green and earthy visual theme throughout the site",
+      "acceptanceCriteria": [
+        "Green and earthy brown color palette is applied consistently across all sections",
+        "Rounded card components are used throughout features, schemes, and testimonials",
+        "Font sizes are large and readable (minimum 16px body text)",
+        "Design is visually coherent from hero to footer"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the theme configuration to include KrishiSahay color palette: primary green (#2E7D32, #4CAF50), earthy brown accents (#795548, #A1887F), and configure rounded corner utilities. Set default font family to a modern sans-serif stack optimized for readability."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global CSS variables for the KrishiSahay color scheme, set base font size to minimum 16px for body text, and establish consistent spacing and border-radius defaults for cards throughout the application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build single-page application with sticky navbar and smooth scroll navigation",
+      "acceptanceCriteria": [
+        "Sticky navbar is visible on scroll",
+        "Navigation links smooth-scroll to their respective sections",
+        "Language selector dropdown displays all 6 language options",
+        "KrishiSahay branding is visible in the navbar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "create",
+          "description": "Create a sticky navbar component with KrishiSahay logo/name, navigation links to all sections (Home, Features, How It Works, Chat Demo, Schemes, About, Contact), and a language selector dropdown showing English, Hindi, Marathi, Punjabi, Tamil, and Telugu. Implement smooth scroll behavior using anchor links. Use green theme colors and ensure mobile responsiveness with hamburger menu."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Navbar component at the top of the application. Structure the App as a single-page layout with section IDs matching navbar anchor links to enable smooth scrolling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create hero section with headline, CTAs, and farmland background image",
+      "acceptanceCriteria": [
+        "Headline and subheading are displayed prominently",
+        "Both CTA buttons are present and scroll to correct sections",
+        "Hero background uses the generated farmland image",
+        "Hero section is full-width and visually impactful on mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a full-width hero section component with headline 'Empowering Farmers with AI-Driven Agricultural Guidance', subheading 'Ask questions about crops, pests, fertilizers, and government schemes in your local language.', two CTA buttons ('Ask Your Question' linking to #chat-demo and 'Explore Features' linking to #features), and use the generated image at frontend/public/assets/generated/hero-farmland.dim_1600x900.png as the background. Implement responsive text sizing and ensure CTAs are prominent on mobile."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the HeroSection component below the Navbar as the first content section of the single-page application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build Features section with 7 feature cards in responsive grid",
+      "acceptanceCriteria": [
+        "All 7 feature cards are displayed with icon, title, and description",
+        "Grid is responsive and adapts to mobile screens",
+        "Cards use rounded corners and the earthy green theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FeaturesSection.tsx",
+          "operation": "create",
+          "description": "Create a Features section component displaying 7 cards in a responsive grid (2-3 columns on desktop, 1-2 on mobile). Each card includes an emoji icon, title, and brief description: 🌾 Crop Advisory, 🐛 Pest & Disease Identification, 🌱 Fertilizer Recommendations, 💧 Irrigation Guidance, 🌦 Weather-based Suggestions, 🏛 Government Scheme Information, 📶 Low-Connectivity Optimized AI. Apply rounded corners and green/earthy theme styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the FeaturesSection component with section id 'features' to enable navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build How It Works section showing 4-step visual flow",
+      "acceptanceCriteria": [
+        "4 steps are displayed in sequence with numbers and icons",
+        "Connecting arrows or visual flow indicators are present",
+        "Section is readable and clear on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HowItWorksSection.tsx",
+          "operation": "create",
+          "description": "Create a How It Works section displaying a 4-step visual flow with numbered steps, icons, and connecting arrows: Step 1 – Farmer asks a question (text/voice/image); Step 2 – AI processes using Generative AI + Agricultural Knowledge Base; Step 3 – Smart, simple answer delivered in local language; Step 4 – Offline-ready lightweight response mode. Use horizontal layout on desktop, vertical on mobile. Apply green theme styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the HowItWorksSection component with section id 'how-it-works' to enable navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Live AI Chat Demo section with pre-programmed responses",
+      "acceptanceCriteria": [
+        "Chat interface renders a message history with user and AI bubbles styled differently",
+        "At least 8 pre-programmed responses are triggered by relevant keywords",
+        "A default fallback response handles unrecognized input",
+        "Simulated typing delay is present before AI response appears",
+        "Input field is cleared after sending a message",
+        "Example placeholder text is shown in the input field"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ChatDemoSection.tsx",
+          "operation": "create",
+          "description": "Create a Live AI Chat Demo section with a chat interface UI including message history display, input field with placeholder 'Type your agricultural question…', and send button. Implement pre-programmed keyword-based responses for at least 8 common agricultural queries covering fertilizer advice, pest identification, irrigation schedules, weather-based planting guidance, and government scheme eligibility. Include a helpful default response for unrecognized queries. Add simulated typing delay before AI responses appear. Style user and AI message bubbles differently using green theme colors."
+        },
+        {
+          "path": "frontend/src/hooks/useChatDemo.ts",
+          "operation": "create",
+          "description": "Create a custom hook to manage chat state, message history, and pre-programmed response matching logic. Implement keyword detection for at least 8 agricultural query patterns and return appropriate responses with simulated delay."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the ChatDemoSection component with section id 'chat-demo' to enable navbar and hero CTA navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build Government Schemes section displaying 3 scheme cards",
+      "acceptanceCriteria": [
+        "All 3 scheme cards are displayed with name, description, and eligibility info",
+        "Cards are styled consistently with the green/earthy theme",
+        "Section is responsive on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SchemesSection.tsx",
+          "operation": "create",
+          "description": "Create a Government Schemes section displaying 3 cards: PM-KISAN (Pradhan Mantri Kisan Samman Nidhi), Soil Health Card Scheme, and Pradhan Mantri Fasal Bima Yojana. Each card includes scheme name, brief description of benefits, and eligibility note. Use rounded card styling with green/earthy theme. Arrange in responsive grid."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the SchemesSection component with section id 'schemes' to enable navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Stats section displaying key metrics in horizontal band",
+      "acceptanceCriteria": [
+        "At least 4 stat items are displayed",
+        "Numbers are visually prominent (large bold text)",
+        "Section uses a contrasting background (e.g., green band)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StatsSection.tsx",
+          "operation": "create",
+          "description": "Create a Stats section displaying at least 4 statistics in a horizontal band: '10,000+ Queries Resolved', '5,000+ Farmers Supported', '15+ Crops Covered', '6 Languages Supported'. Use large, bold numbers with descriptive labels. Apply contrasting green background and white text. Ensure responsive layout that adapts to mobile screens."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the StatsSection component between other major sections to provide visual break and highlight achievements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Farmer Testimonials section with testimonial cards",
+      "acceptanceCriteria": [
+        "At least 3 testimonial cards are displayed",
+        "Each card includes name, location, quote, and avatar",
+        "Section is responsive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Create a Farmer Testimonials section with at least 3 testimonial cards. Each card includes farmer's name, village/state, quote about their KrishiSahay experience, and avatar placeholder (use the generated image at frontend/public/assets/generated/farmer-avatar.dim_256x256.png or solid color circle). Arrange in responsive grid using rounded card styling with earthy theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the TestimonialsSection component to display social proof from farmers."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build About section describing KrishiSahay mission and key pillars",
+      "acceptanceCriteria": [
+        "Mission statement is displayed prominently",
+        "4 key pillars are listed with icons or visual indicators",
+        "Section is readable and visually distinct"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create an About section displaying KrishiSahay mission statement: 'A Generative AI–powered agricultural query resolution system designed to bridge the knowledge gap between modern agricultural research and farmers.' Highlight 4 key pillars with icons or visual indicators: AI-powered search, Smart summarization, Offline support, Farmer-first design. Use green theme with clear typography and responsive layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the AboutSection component with section id 'about' to enable navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Build Contact/Query form section with frontend-only validation and success message",
+      "acceptanceCriteria": [
+        "Form includes Name, Phone, Village/State, and Query Message fields",
+        "Validation prevents empty submission",
+        "Success message is displayed on valid submission",
+        "Form resets after successful submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create a Contact/Query form section with fields: Name, Phone, Village/State, and Query Message, plus a Submit button. Implement frontend validation to ensure all fields are filled before submission. On valid submission, display success message 'Your query has been submitted! We'll get back to you soon.' and reset the form. No backend submission required. Use green theme styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the ContactSection component with section id 'contact' to enable navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Build footer with branding, links, social icons, and copyright",
+      "acceptanceCriteria": [
+        "Footer includes Privacy Policy and Terms links",
+        "Social media icons for Facebook, Twitter, YouTube, and WhatsApp are present",
+        "Copyright line is displayed",
+        "Footer uses a dark contrasting background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer component with KrishiSahay logo/name, tagline, links to Privacy Policy and Terms (as placeholder modals or simple pages), social media icons (Facebook, Twitter, YouTube, WhatsApp), and copyright line. Use dark green or brown background with light text for contrast. Ensure responsive layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Footer component at the bottom of the single-page application after all content sections."
+        }
+      ]
+    }
+  ]
+}

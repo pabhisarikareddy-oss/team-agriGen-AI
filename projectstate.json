@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "KrishiSahay – Generative AI–Powered Agricultural Query Resolution System. A modern, responsive, multilingual website for an AI-powered agricultural assistant helping farmers with crop advisory, pest identification, fertilizer recommendations, irrigation guidance, weather suggestions, and government scheme information. Features a simulated AI chat demo, green/earthy design theme, mobile-first responsive layout, and frontend-only contact form.",
+  "architectural_notes": [
+    "Responsive HTML5/CSS3/JavaScript frontend only — no backend or AI integration",
+    "Simulated chat uses pre-programmed responses; no live AI API calls",
+    "Mobile-first design optimized for low-bandwidth/rural networks",
+    "Green, brown, white color palette with farmer-friendly fonts and rounded cards"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wide aerial view of lush green Indian farmland with farmers using mobile phones in the foreground, golden hour lighting, vibrant crops stretching to the horizon (hero-farmland.dim_1600x900.png)\n- Flat illustration of a friendly farmer character wearing a turban and holding a smartphone, on a transparent background (farmer-avatar.dim_256x256.png)",
+  "existing_features": [
+    {
+      "id": "feature-apply-a-cohesive-green-and-earthy-visual-theme-throughout-the-entire-site-primary-green-2e7d32-4caf50-range-earthy-brown-accents-795548-a1887f-range-white-backgrounds-rounded-cards-modern-sans-serif-fonts-optimized-for-readability-and-agriculture-themed-iconography-enforce-this-consistently-across-all-sections",
+      "title": "Apply a cohesive green and earthy visual theme throughout the entire site: primary green (#2E7D32 / #4CAF50 range), earthy brown accents (#795548 / #A1887F range), white backgrounds, rounded cards, modern sans-serif fonts optimized for readability, and agriculture-themed iconography. Enforce this consistently across all sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-page-single-page-react-application-for-krishisahay-with-smooth-scroll-navigation-include-a-sticky-top-navbar-with-the-krishisahay-logo-name-navigation-links-to-all-sections-home-features-how-it-works-chat-demo-schemes-about-contact-and-a-language-selector-dropdown-showing-english-hindi-marathi-punjabi-tamil-and-telugu-as-visual-options-no-actual-translation-needed",
+      "title": "Build a full-page, single-page React application for KrishiSahay with smooth scroll navigation. Include a sticky top navbar with the KrishiSahay logo/name, navigation links to all sections (Home, Features, How It Works, Chat Demo, Schemes, About, Contact), and a language selector dropdown showing English, Hindi, Marathi, Punjabi, Tamil, and Telugu as visual options (no actual translation needed).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-hero-section-with-headline-empowering-farmers-with-ai-driven-agricultural-guidance-subheading-ask-questions-about-crops-pests-fertilizers-and-government-schemes-in-your-local-language-two-cta-buttons-ask-your-question-linking-to-the-chat-demo-section-and-explore-features-linking-to-the-features-section-and-a-full-width-background-using-the-generated-indian-farmland-hero-image",
+      "title": "Create a hero section with: headline 'Empowering Farmers with AI-Driven Agricultural Guidance', subheading 'Ask questions about crops, pests, fertilizers, and government schemes in your local language.', two CTA buttons ('Ask Your Question' linking to the chat demo section and 'Explore Features' linking to the features section), and a full-width background using the generated Indian farmland hero image.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-features-section-with-7-cards-each-containing-an-icon-title-and-brief-description-crop-advisory-pest-disease-identification-fertilizer-recommendations-irrigation-guidance-weather-based-suggestions-government-scheme-information-low-connectivity-optimized-ai-display-as-a-responsive-grid-2-3-columns-on-desktop-1-2-on-mobile",
+      "title": "Build a Features section with 7 cards, each containing an icon, title, and brief description: 🌾 Crop Advisory, 🐛 Pest & Disease Identification, 🌱 Fertilizer Recommendations, 💧 Irrigation Guidance, 🌦 Weather-based Suggestions, 🏛 Government Scheme Information, 📶 Low-Connectivity Optimized AI. Display as a responsive grid (2–3 columns on desktop, 1–2 on mobile).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-how-it-works-section-showing-a-4-step-visual-flow-with-numbered-steps-and-icons-step-1-farmer-asks-a-question-text-voice-image-step-2-ai-processes-using-generative-ai-agricultural-knowledge-base-step-3-smart-simple-answer-delivered-in-local-language-step-4-offline-ready-lightweight-response-mode",
+      "title": "Build a 'How It Works' section showing a 4-step visual flow with numbered steps and icons: Step 1 – Farmer asks a question (text/voice/image); Step 2 – AI processes using Generative AI + Agricultural Knowledge Base; Step 3 – Smart, simple answer delivered in local language; Step 4 – Offline-ready lightweight response mode.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-live-ai-chat-demo-section-with-a-chat-interface-ui-include-a-chat-window-displaying-a-conversation-history-an-input-field-with-placeholder-type-your-agricultural-question-and-a-send-button-implement-pre-programmed-ai-responses-for-at-least-8-common-queries-covering-topics-like-fertilizer-advice-for-specific-crops-soils-pest-identification-irrigation-schedules-weather-based-planting-guidance-and-government-scheme-eligibility-unrecognized-queries-should-receive-a-helpful-default-response-responses-should-appear-after-a-short-simulated-delay",
+      "title": "Build a Live AI Chat Demo section with a chat interface UI. Include: a chat window displaying a conversation history, an input field with placeholder 'Type your agricultural question…', and a send button. Implement pre-programmed AI responses for at least 8 common queries covering topics like fertilizer advice for specific crops/soils, pest identification, irrigation schedules, weather-based planting guidance, and government scheme eligibility. Unrecognized queries should receive a helpful default response. Responses should appear after a short simulated delay.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-government-schemes-section-displaying-3-scheme-cards-pm-kisan-pradhan-mantri-kisan-samman-nidhi-soil-health-card-scheme-and-pradhan-mantri-fasal-bima-yojana-each-card-should-include-the-scheme-name-a-brief-description-of-its-benefits-and-an-eligibility-note",
+      "title": "Build a Government Schemes section displaying 3 scheme cards: PM-KISAN (Pradhan Mantri Kisan Samman Nidhi), Soil Health Card Scheme, and Pradhan Mantri Fasal Bima Yojana. Each card should include the scheme name, a brief description of its benefits, and an eligibility note.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-stats-section-displaying-10-000-queries-resolved-5-000-farmers-supported-and-at-least-2-additional-relevant-stats-e-g-15-crops-covered-6-languages-supported-display-as-large-bold-numbers-with-labels-in-a-horizontal-band",
+      "title": "Build a Stats section displaying: '10,000+ Queries Resolved', '5,000+ Farmers Supported', and at least 2 additional relevant stats (e.g., '15+ Crops Covered', '6 Languages Supported'). Display as large, bold numbers with labels in a horizontal band.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-farmer-testimonials-section-with-at-least-3-testimonial-cards-each-containing-a-farmer-s-name-village-state-a-quote-about-their-experience-using-krishisahay-and-an-avatar-placeholder",
+      "title": "Build a Farmer Testimonials section with at least 3 testimonial cards, each containing a farmer's name, village/state, a quote about their experience using KrishiSahay, and an avatar placeholder.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-about-section-describing-krishisahay-as-a-generative-ai-powered-agricultural-query-resolution-system-designed-to-bridge-the-knowledge-gap-between-modern-agricultural-research-and-farmers-highlight-4-key-pillars-ai-powered-search-smart-summarization-offline-support-farmer-first-design",
+      "title": "Build an About section describing KrishiSahay as 'A Generative AI–powered agricultural query resolution system designed to bridge the knowledge gap between modern agricultural research and farmers.' Highlight 4 key pillars: AI-powered search, Smart summarization, Offline support, Farmer-first design.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-contact-query-form-section-with-fields-name-phone-village-state-and-query-message-plus-a-submit-button-on-submit-validate-that-all-fields-are-filled-and-display-a-success-message-your-query-has-been-submitted-we-ll-get-back-to-you-soon-the-form-is-frontend-only-no-backend-submission-needed",
+      "title": "Build a Contact/Query form section with fields: Name, Phone, Village/State, and Query Message, plus a Submit button. On submit, validate that all fields are filled and display a success message ('Your query has been submitted! We'll get back to you soon.'). The form is frontend-only — no backend submission needed.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-footer-with-krishisahay-logo-name-tagline-links-to-privacy-policy-and-terms-displayed-as-placeholder-pages-or-modals-social-media-icons-facebook-twitter-youtube-whatsapp-and-a-copyright-line-use-a-dark-green-or-brown-background",
+      "title": "Build a footer with: KrishiSahay logo/name, tagline, links to Privacy Policy and Terms (displayed as placeholder pages or modals), social media icons (Facebook, Twitter, YouTube, WhatsApp), and a copyright line. Use a dark green or brown background.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with hero section, green/earthy theme, and CTA buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Features section with 7 icon cards (crops, pests, fertilizer, irrigation, weather, schemes, low-connectivity)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "How It Works step-by-step visual flow section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Live AI Chat Demo with pre-programmed responses for common agricultural queries",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Government Schemes section (PM-KISAN, Soil Health Card, Pradhan Mantri Fasal Bima Yojana)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Multilingual selector as visual UI feature (English-only content)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "About section describing KrishiSahay's mission",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Frontend-only contact/query form with success message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Stats section (10,000+ Queries Resolved, 5,000+ Farmers Supported) and farmer testimonials",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Footer with Privacy Policy, Terms, and social media links",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "KrishiSahay",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
